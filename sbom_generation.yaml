@@ -113,9 +113,9 @@ steps:
     command: |
       # For more details, visit https://github.com/CycloneDX/cyclonedx-cli/blob/main/README.md
       chmod +x cyclonedx-linux-x64
-      ./cyclonedx-linux-x64 merge --input-files ./mds_plugin/artifactSBOM.json ./mrs_plugin/artifactSBOM.json ./gui/backend/artifactSBOM.json ./gui/frontend/artifactSBOM.json ./gui/extension/artifactSBOM.json --output-file mergedArtifactSBOM.json
+      ./cyclonedx-linux-x64 merge --input-files ./mds_plugin/artifactSBOM.json ./mrs_plugin/artifactSBOM.json ./gui/backend/artifactSBOM.json ./gui/frontend/artifactSBOM.json ./gui/extension/artifactSBOM.json --output-file artifactSBOM.json
 
 outputArtifacts:
-  - name: mergedArtifactSBOM
+  - name: artifactSBOM
     type: BINARY
-    location: ${OCI_PRIMARY_SOURCE_DIR}/mergedArtifactSBOM.json
+    location: ${OCI_PRIMARY_SOURCE_DIR}/artifactSBOM.json
